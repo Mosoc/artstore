@@ -1,7 +1,8 @@
 class Admin::ProductsController < ApplicationController
 
 before_action :find_product, only: [:edit, :update, :show ,:destroy]
-
+before_action :authenticate_user!
+before_action :admin_required
 
 def index
   @products = Product.all
