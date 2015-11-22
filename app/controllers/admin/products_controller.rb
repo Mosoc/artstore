@@ -19,7 +19,7 @@ end
 def create 
   @product = Product.new(product_params)
     if @product.save
-      redirect_to admin_product_path
+      redirect_to admin_products_path
     else
       render :new;
     end
@@ -30,7 +30,7 @@ end
 
 def update
   if @product.update(product_params)
-    redirect_to admin_product_path
+    redirect_to admin_products_path
   else
     rende :edit
   end  
