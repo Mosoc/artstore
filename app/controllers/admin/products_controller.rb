@@ -1,5 +1,7 @@
 class Admin::ProductsController < ApplicationController
 
+layout "admin"
+
 before_action :find_product, only: [:edit, :update, :show ,:destroy]
 before_action :authenticate_user!
 before_action :admin_required
@@ -14,6 +16,7 @@ end
 
 def new
   @product = Product.new
+  @photo = @product.build_photo
 end
 
 def create 
@@ -26,13 +29,17 @@ def create
 end
 
 def edit
+   @photo = @product.photo
+   if !@photo.present?
+    @photo = @product.build_photo
+   end
 end
 
 def update
   if @product.update(product_params)
     redirect_to admin_products_path
   else
-    rende :edit
+    render :edit
   end  
 end
 
@@ -48,7 +55,7 @@ def find_product
 end
 
 def product_params
-  params.require(:product).permit(:title, :description, :quantity, :price)
+  params.require(:product).permit(:title, :description, :quantity, :price, photo_attributes: [:image, :id])
       
 end
 
