@@ -6,6 +6,7 @@ gem 'simple_form'
 gem 'bootstrap-sass'
 gem 'font-awesome-rails'
 gem 'devise'
+gem 'aasm'
 gem "carrierwave"
 gem "mini_magick"
 gem 'uglifier', '>= 1.3.0'
