@@ -8,10 +8,12 @@ Rails.application.routes.draw do
     namespace :admin do
         resources :products
         resources :orders do
-          post :cancel
-          post :ship
-          post :shipped
-          post :return
+          member do
+            post :cancel
+            post :ship
+            post :shipped
+            post :return
+          end
         end
         resources :users
         resources :users do
@@ -23,7 +25,7 @@ Rails.application.routes.draw do
     end
 
     namespace :account do
-      resources :order
+      resources :orders
     end  
 
     resources :products

@@ -7,6 +7,10 @@ gem 'bootstrap-sass'
 gem 'font-awesome-rails'
 gem 'devise'
 gem 'aasm'
+gem 'pay2go'
+gem 'letter_opener', group: :development
+gem 'roadie', "2.4.3"
+gem 'figaro'
 gem "carrierwave"
 gem "mini_magick"
 gem 'uglifier', '>= 1.3.0'
@@ -32,3 +36,8 @@ group :development, :test do
   gem 'spring'
 end
 
+
+group :production do
+   gem "pg"
+   gem "rails_12factor"
+end
