@@ -11,7 +11,7 @@ class CartItemsController < ApplicationController
  
   def update
     @cart = current_cart
-    @item = @cart.cart_items.find_cart_item(params[:id])
+    @item = @cart.find_cart_item(params[:id])
     if @item
     @item.update(item_params)
     flash[:notice] = "成功改變數量"
