@@ -7,6 +7,7 @@ gem 'bootstrap-sass'
 gem 'font-awesome-rails'
 gem 'devise'
 gem 'aasm'
+gem 'fog'
 gem 'pay2go'
 gem 'letter_opener', group: :development
 gem 'roadie', "2.4.3"
