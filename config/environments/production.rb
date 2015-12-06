@@ -91,7 +91,6 @@ Rails.application.configure do
     user_name:      ENV["mailgun_user"],
     password:       ENV["mailgun_secret"],
     domain:         "sandbox510a61692d12461e8e8bc540c32dc552.mailgun.org", # 你的 mailgun domain name
-
     authentication: :plain,
   }
 
