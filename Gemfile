@@ -8,6 +8,7 @@ gem 'font-awesome-rails'
 gem 'devise'
 gem 'aasm'
 gem 'fog'
+gem 'delayed_job_active_record'
 gem 'pay2go'
 gem 'letter_opener', group: :development
 gem 'roadie', "2.4.3"
