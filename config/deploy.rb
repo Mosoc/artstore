@@ -38,6 +38,10 @@ set :linked_files, %w{
   config/database.yml
 }
 
+set :linked_files, %w{
+  config/application.yml
+}
+
 namespace :puma do
   desc 'Create Directories for Puma Pids and Socket'
   task :make_dirs do
