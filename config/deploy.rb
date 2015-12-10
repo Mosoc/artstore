@@ -39,6 +39,7 @@ set :puma_init_active_record, true  # Change to false when not using ActiveRecor
 #}
 
 set :linked_files, %w{
+  config/secret.yml
   config/database.yml
   config/application.yml
 }
